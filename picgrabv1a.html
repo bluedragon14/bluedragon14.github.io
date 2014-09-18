@@ -1,0 +1,33 @@
+<html>
+<img id="changeimg" src="http://img3.wikia.nocookie.net/__cb20120530035934/mlpfanart/images/8/8e/Rainbow_Dash_by_Nethear.png" width="320" </img>
+<h1 id="title"> Picture Grabber</h1>
+<p>Enter a URL below containing an image.</p>
+<input type="text" id="myTextField" />
+<input type="submit" id="byBtn" value="Grab the pic!" onclick="change()" />
+<p>Update the width of the image (in pixels) below.</p>
+<input type="text" id="TextField2" />
+<input type="submit" id="byBtn" value="Update the width!" onclick="update()" />
+<p><br> v1.0a, by Erik</p>
+</html>
+
+<script>
+function change() {
+    var myNewImage = document.getElementById('myTextField').value;
+    if (myNewImage.length < 3) {
+        alert('Please enter a valid URL.');
+        return;
+    }
+    var image = document.getElementById('changeimg');
+    image.src = myNewImage;
+}
+
+function update() {
+    var NewWidth = document.getElementById('TextField2').value;
+    if (NewWidth.length < 3) {
+        alert('Dont make the image so small!');
+        return;
+    }
+	var image = document.getElementById('changeimg');
+        image.width = NewWidth;
+}
+</script>
