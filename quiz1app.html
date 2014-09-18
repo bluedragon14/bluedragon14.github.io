@@ -1,0 +1,20 @@
+<html>
+<h1 id="title">Converting to Upper Case</h1>
+<input type="text" id="myTextField"/>
+<input type="submit" id="byBtn" value="Change" onclick="change()"/>
+<p id="converted"> </p>
+<p><br>Ohio ID: ew711111
+</html>
+
+<script>
+function change(){
+   var myNewTitle = document.getElementById('myTextField').value;
+   if( myNewTitle.length==0 ){
+       alert('Write Some real Text please.');
+   return;
+   }
+   var upper = document.getElementById('converted');
+   var conversion = myNewTitle.toUpperCase();
+   upper.innerHTML = conversion;
+}
+</script>
